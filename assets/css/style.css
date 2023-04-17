@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: cursive;
+	overflow-x: hidden;
+}
+body {
+	background: linear-gradient(45deg, #a8e890 -100%, #cfff8d 100%);
+	display: grid;
+	height: 100vh;
+}
+main {
+	margin: auto;
+	width: 40%;
+	min-width: 25rem;
+}
+h1 {
+	text-align: center;
+	margin: 2rem;
+	font-size: 3rem;
+	color: #333;
+}
+#grid {
+	display: grid;
+	grid-template-columns: repeat(3, 8.5rem);
+	place-content: center;
+}
+.btn {
+	font-size: 4rem;
+	margin: 10%;
+	color: rgb(255, 255, 255);
+	height: 7rem;
+	width: 7rem;
+	background-color: #749f82;
+	border: 1px solid #f9f9f9;
+	box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+	background-color: #425f57;
+	transform: translate(-5px, 5px);
+	box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+.reset {
+	display: block;
+	margin: 2rem auto;
+	padding: 0.2rem 1rem 0.5rem;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	background-color: transparent;
+	border-radius: 0.3rem;
+	transition: all 0.3s ease;
+	box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.25);
+	color: #000;
+	background-color: transparent;
+	border: 2px solid #2e8fd4;
+}
+.reset:hover {
+	background-color: #2e8fd4;
+	color: #fff;
+	transform: translate(-5px, 5px);
+	box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+.player-selected {
+	box-shadow: -5px 5px rgba(0, 0, 0, 0.25);
+}
+.player-selected:hover {
+	transform: translate(0, 0);
+	box-shadow: -5px 5px rgba(0, 0, 0, 0.25);
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100vh;
+	width: 100vw;
+	display: none;
+}
+.gameover {
+	transition: all 0.3s ease;
+	transform: scale(0);
+	height: 20rem;
+	width: 60vw;
+	margin: auto;
+	background: linear-gradient(45deg, #a2d5ab -50%, #e5efc1 100%);
+	font-size: 1.5rem;
+	text-align: center;
+	position: relative;
+	padding: 1%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	border-radius: 10px;
+}
+.gameover .close {
+	display: inline-block;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+	height: 2rem;
+	width: 2rem;
+	border-radius: 50%;
+	font-size: 1.3rem;
+	text-align: center;
+	border: 2px solid black;
+	overflow: hidden;
+}
+.gameover .reset {
+	margin: 0 auto;
+}
+.overlay.active {
+	display: grid;
+}
+.overlay.active .gameover {
+	transform: scale(1);
+}
+
+.red {
+	background-color: #ff1e00;
+}
+.red:hover {
+	background-color: #ff1e00;
+}
+.green {
+	background-color: #367e18;
+}
+.green:hover {
+	background-color: #367e18;
+}
+footer p {
+	width: 100%;
+	background-color: #333;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	text-align: center;
+	color: #ccc;
+}
+@media (max-width: 400px) {
+	html {
+		font-size: 70%;
+	}
+}

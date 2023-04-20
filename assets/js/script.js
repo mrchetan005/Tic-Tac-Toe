@@ -6,7 +6,7 @@ const grid = document.getElementById('grid'),
     overlay = document.querySelector(".overlay"),
     closeMessage = document.querySelector('.close'),
     player1 = 'X', player2 = 'O';
-let currentPlayer = player1, gameOver = false;
+let currentPlayer = player1, gameOver = false, countClicks = 0;
 
 // function to check winner
 function checkForWinner() {
@@ -26,11 +26,7 @@ function checkForWinner() {
 
 // function to check for draw
 function checkForDraw() {
-    let count = 0;
-    for (let val of buttons) {
-        count += val.innerHTML !== '' ? 1 : 0;
-    }
-    return count === 9;
+    return countClicks === 9;
 }
 
 // function to handle a button click
@@ -38,6 +34,7 @@ function handleButtonClick(e) {
     if (e.target.innerText !== '' || gameOver) {
         return;
     }
+    countClicks++;
     e.target.innerText = currentPlayer;
     e.target.classList.add('player-selected');
     e.target.classList.add(e.target.innerText === player1 ? 'red' : 'green');
@@ -59,6 +56,7 @@ function handleButtonClick(e) {
 // reset button functionality
 function resetGame() {
     gameOver = false;
+    countClicks = 0;
     currentPlayer = player1;
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].innerHTML = '';

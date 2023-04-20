@@ -62,7 +62,7 @@ function handleButtonClick(e) {
 
 // reset button functionality
 function resetGame() {
-    playerTurnMessage.innerText = `${nameOfPlayer1.value}'s turn`;
+    playerTurnMessage.innerText = `${nameOfPlayer1.value.toUpperCase()}'s turn`;
     startingPage.classList.remove('hide');
     gameOver = false;
     countClicks = 0;

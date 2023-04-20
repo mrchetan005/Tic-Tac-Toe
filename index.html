@@ -10,6 +10,40 @@
 	</head>
 	<body>
 		<main>
+			<!-- 
+				! Starting Page
+			 -->
+			<div class="starting-page">
+				<div class="container">
+					<h1>Tic Tac Toe</h1>
+					<p class="text">Enter player's name below and start playing!</p>
+					<div class="input-wrapper">
+						<label for="player1">Player 1</label>
+						<input
+							type="text"
+							id="player1"
+							value="Player1"
+							autocomplete="off"
+							required
+						/>
+					</div>
+					<div class="input-wrapper">
+						<label for="player2">Player 2</label>
+						<input
+							type="text"
+							id="player2"
+							value="Player2"
+							autocomplete="off"
+							required
+						/>
+					</div>
+					<button class="start reset">Let's Start</button>
+				</div>
+			</div>
+
+			<!-- 
+				! Grid Buttons 
+			 -->
 			<h1>Tic Tac Toe</h1>
 			<div id="grid">
 				<button class="btn" id="1"></button>
@@ -23,6 +57,16 @@
 				<button class="btn" id="9"></button>
 			</div>
 
+			<!-- 
+				! Player's Turn Message
+			 -->
+			<div class="player-turn-msg">
+				<p class="text player-turn">Player 1 turn</p>
+			</div>
+
+			<!-- 
+				! Gameover Message
+			 -->
 			<div class="overlay">
 				<div class="gameover">
 					<span class="close">X</span>
@@ -31,7 +75,11 @@
 					<button class="reset">Play again!</button>
 				</div>
 			</div>
-			<button class="reset">Reset</button>
+
+			<!-- 
+				! Reset Button
+			 -->
+			<button class="reset restart">Restart</button>
 		</main>
 		<footer>
 			<p>&copy; Copyright Chetan | Made with 🤍 by Chetan</p>

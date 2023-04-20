@@ -12,8 +12,6 @@ const buttons = document.querySelectorAll('.btn'),
     player1 = 'X', player2 = 'O';
 let currentPlayer = player1, gameOver = false, countClicks = 0;
 
-playerTurnMessage.innerText = `${nameOfPlayer1.value}'s turn`;
-
 // function to check winner
 function checkForWinner() {
     const winningCombos = [
@@ -64,6 +62,7 @@ function handleButtonClick(e) {
 
 // reset button functionality
 function resetGame() {
+    playerTurnMessage.innerText = `${nameOfPlayer1.value}'s turn`;
     startingPage.classList.remove('hide');
     gameOver = false;
     countClicks = 0;

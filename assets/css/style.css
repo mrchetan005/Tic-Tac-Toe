@@ -185,16 +185,6 @@ p.player-turn {
 .green:hover {
 	background-color: #367e18;
 }
-footer p {
-	width: 100%;
-	background-color: #333;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 10px;
-	text-align: center;
-	color: #ccc;
-}
 @media (max-width: 650px) {
 	html {
 		font-size: 85%;
